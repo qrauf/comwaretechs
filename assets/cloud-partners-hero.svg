@@ -1,0 +1,56 @@
+<svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Cloud platform illustration</title>
+  <desc id="desc">An original geometric illustration of a glowing cloud above a digital platform.</desc>
+  <defs>
+    <linearGradient id="background" x1="80" y1="40" x2="860" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102B43"/>
+      <stop offset="1" stop-color="#06131F"/>
+    </linearGradient>
+    <linearGradient id="cloud" x1="254" y1="204" x2="711" y2="443" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D7FFFF"/>
+      <stop offset="0.5" stop-color="#6DE8E2"/>
+      <stop offset="1" stop-color="#39A9D6"/>
+    </linearGradient>
+    <linearGradient id="platform" x1="178" y1="455" x2="798" y2="535" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#39D4DD"/>
+      <stop offset="0.5" stop-color="#5AE0F4"/>
+      <stop offset="1" stop-color="#3688D4"/>
+    </linearGradient>
+    <linearGradient id="base" x1="227" y1="544" x2="737" y2="646" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D4C71"/>
+      <stop offset="1" stop-color="#102943"/>
+    </linearGradient>
+    <filter id="glow" x="115" y="105" width="730" height="465" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="22" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.11 0 0 0 0 0.86 0 0 0 0 0.91 0 0 0 0.5 0"/>
+    </filter>
+    <filter id="soft-shadow" x="112" y="415" width="760" height="262" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#000B16" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="720" rx="36" fill="url(#background)"/>
+  <circle cx="480" cy="290" r="250" fill="#25C7D8" fill-opacity="0.09"/>
+  <circle cx="480" cy="290" r="180" fill="#7CE8E3" fill-opacity="0.06"/>
+
+  <path d="M274 371C274 302 330 246 399 246C419 190 471 155 531 155C607 155 668 211 676 285C723 294 759 334 759 383C759 440 713 486 656 486H355C310 486 274 450 274 405V371Z" stroke="#39D4DD" stroke-opacity="0.3" stroke-width="28" filter="url(#glow)"/>
+  <path d="M274 371C274 302 330 246 399 246C419 190 471 155 531 155C607 155 668 211 676 285C723 294 759 334 759 383C759 440 713 486 656 486H355C310 486 274 450 274 405V371Z" fill="#123A57" fill-opacity="0.88" stroke="url(#cloud)" stroke-width="10"/>
+
+  <path d="M488 209V361" stroke="#B6FFFA" stroke-width="12" stroke-linecap="round"/>
+  <path d="M488 361L444 317M488 361L532 317" stroke="#B6FFFA" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M413 385H563" stroke="#6DE8E2" stroke-width="8" stroke-linecap="round" opacity="0.9"/>
+
+  <g filter="url(#soft-shadow)">
+    <path d="M172 474L488 428L803 474L488 536L172 474Z" fill="url(#platform)"/>
+    <path d="M207 489L488 447L768 489L488 517L207 489Z" fill="#E1FFFF" fill-opacity="0.28"/>
+    <path d="M220 505L488 548L756 505L728 617L488 675L248 617L220 505Z" fill="url(#base)"/>
+    <path d="M264 557L488 603L712 557" stroke="#57DCE7" stroke-opacity="0.45" stroke-width="5"/>
+    <path d="M281 593L488 634L695 593" stroke="#57DCE7" stroke-opacity="0.25" stroke-width="4"/>
+    <path d="M331 536L331 638M390 548L390 652M586 548L586 652M645 536L645 638" stroke="#6DE8E2" stroke-opacity="0.18" stroke-width="3"/>
+  </g>
+
+  <circle cx="167" cy="173" r="4" fill="#B6FFFA"/>
+  <circle cx="789" cy="202" r="5" fill="#6DE8E2"/>
+  <circle cx="741" cy="112" r="3" fill="#D7FFFF"/>
+  <circle cx="221" cy="299" r="3" fill="#6DE8E2"/>
+</svg>
