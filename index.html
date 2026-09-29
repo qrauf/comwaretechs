@@ -221,8 +221,7 @@
             >View on Google Maps <span aria-hidden="true">→</span></a>
           </div>
 
-          <form class="contact-form" action="https://formsubmit.co/contactus@comwaretechs.com" method="POST">
-            <input type="hidden" name="_subject" value="New website inquiry for Comware Technologies" />
+          <form class="contact-form" action="/api/contact/submit" method="POST">
             <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display: none" />
             <div class="field-row">
               <div class="field">
@@ -248,10 +247,10 @@
 
             <button type="submit" class="btn btn-primary submit-btn">Send</button>
 
+            <p class="recaptcha-note" id="contactStatus" role="status" aria-live="polite" hidden></p>
+
             <p class="recaptcha-note">
-              Form submissions are processed by
-              <a href="https://formsubmit.co" target="_blank" rel="noreferrer">FormSubmit</a>
-              for delivery to Comware Technologies.
+              Your message will be sent to contactus@comwaretechs.com using GoDaddy email.
             </p>
           </form>
         </div>
