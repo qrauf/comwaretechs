@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" width="640" height="320" role="img" aria-labelledby="title">
+  <title id="title">Comware Technologies</title>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="70%">
+      <stop offset="0" stop-color="#16213a"/>
+      <stop offset="1" stop-color="#090d17"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="192" y1="32" x2="448" y2="288" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8ce8ff"/>
+      <stop offset="0.55" stop-color="#3fb6ff"/>
+      <stop offset="1" stop-color="#2a6bff"/>
+    </linearGradient>
+    <linearGradient id="tagline" x1="180" y1="0" x2="460" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8ce8ff"/>
+      <stop offset="1" stop-color="#5aa8ff"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="640" height="320" fill="url(#bg)"/>
+  <rect width="640" height="320" fill="url(#grid)"/>
+
+  <!-- Open ring: two arcs leave room for the wordmark on each side -->
+  <g filter="url(#glow)" fill="none" stroke="url(#ring)" stroke-width="10" stroke-linecap="round">
+    <path d="M209.1 96 A128 128 0 0 1 430.9 96"/>
+    <path d="M430.9 224 A128 128 0 0 1 209.1 224"/>
+  </g>
+  <!-- Connection nodes at the arc ends -->
+  <g fill="#bff3ff" filter="url(#glow)">
+    <circle cx="430.9" cy="96" r="6.5"/>
+    <circle cx="209.1" cy="224" r="6.5"/>
+  </g>
+
+  <text x="320" y="170" text-anchor="middle"
+        font-family="Poppins, Montserrat, 'Segoe UI', Arial, sans-serif"
+        font-size="104" font-weight="600" letter-spacing="-2" fill="#f4f8ff">comware</text>
+  <text x="323" y="208" text-anchor="middle"
+        font-family="Poppins, Montserrat, 'Segoe UI', Arial, sans-serif"
+        font-size="25" font-weight="600" letter-spacing="8" fill="url(#tagline)">TECHNOLOGIES</text>
+</svg>

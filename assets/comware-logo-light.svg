@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="title">
+  <title id="title">Comware Technologies</title>
+  <defs>
+    <linearGradient id="ring" x1="96" y1="96" x2="416" y2="416" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22b8e8"/>
+      <stop offset="0.55" stop-color="#1a8cf0"/>
+      <stop offset="1" stop-color="#1f4fd8"/>
+    </linearGradient>
+    <linearGradient id="tagline" x1="140" y1="0" x2="372" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1596c8"/>
+      <stop offset="1" stop-color="#1f5fd8"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.35 0" result="soft"/>
+      <feMerge>
+        <feMergeNode in="soft"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Open ring: two arcs leave room for the wordmark on each side -->
+  <g filter="url(#glow)" fill="none" stroke="url(#ring)" stroke-width="11" stroke-linecap="round">
+    <path d="M120.1 192.6 A150 150 0 0 1 391.9 192.6"/>
+    <path d="M391.9 319.4 A150 150 0 0 1 120.1 319.4"/>
+  </g>
+  <g fill="#1a8cf0">
+    <circle cx="391.9" cy="192.6" r="7"/>
+    <circle cx="120.1" cy="319.4" r="7"/>
+  </g>
+
+  <text x="256" y="270" text-anchor="middle"
+        font-family="Poppins, Montserrat, 'Segoe UI', Arial, sans-serif"
+        font-size="78" font-weight="600" letter-spacing="-1.5" fill="#13263d">comware</text>
+  <text x="258" y="308" text-anchor="middle"
+        font-family="Poppins, Montserrat, 'Segoe UI', Arial, sans-serif"
+        font-size="19" font-weight="500" letter-spacing="7.5" fill="url(#tagline)">TECHNOLOGIES</text>
+</svg>

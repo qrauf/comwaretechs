@@ -61,7 +61,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 80px;
+  min-height: 88px;
 }
 
 .brand {
@@ -73,8 +73,8 @@ textarea {
 
 .brand-logo {
   display: block;
-  width: 112px;
-  height: auto;
+  width: auto;
+  height: 80px;
   object-fit: contain;
 }
 
@@ -915,8 +915,8 @@ textarea:focus {
   .nav-wrap {
     flex-direction: column;
     justify-content: center;
-    gap: 0.8rem;
-    padding: 1rem 0;
+    gap: 0.5rem;
+    padding: 0.6rem 0;
   }
 
   .solutions-intro {
@@ -969,7 +969,7 @@ textarea:focus {
 
 @media (max-width: 560px) {
   .brand-logo {
-    width: 96px;
+    height: 56px;
   }
 
   .main-nav {
