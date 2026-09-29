@@ -16,9 +16,9 @@ function contactResponse(int $statusCode, string $body, array $headers = []): ar
     ];
 }
 
-function contactRedirect(): array
+function contactRedirect(string $status = 'sent'): array
 {
-    return contactResponse(303, '', ['Location' => '/?contact=sent#contact']);
+    return contactResponse(303, '', ['Location' => "/?contact={$status}#contact"]);
 }
 
 function main(array $event, object $context): array
@@ -54,7 +54,7 @@ function main(array $event, object $context): array
 
     if ($smtpUsername === '' || $smtpPassword === '') {
         error_log('Contact form SMTP credentials are not configured.');
-        return contactResponse(503, 'The contact form is temporarily unavailable. Please email contactus@comwaretechs.com directly.');
+        return contactRedirect('error');
     }
 
     try {
@@ -81,6 +81,10 @@ function main(array $event, object $context): array
         return contactRedirect();
     } catch (Throwable $error) {
         error_log('Contact form delivery failed: ' . $error->getMessage());
-        return contactResponse(502, 'We could not send your message. Please email contactus@comwaretechs.com directly.');
+        // TEMPORARY diagnostics: remove once mail delivery works.
+        if (($input['_debug'] ?? '') === '1') {
+            return contactResponse(200, 'Mail error: ' . $error->getMessage(), ['Content-Type' => 'text/plain; charset=UTF-8']);
+        }
+        return contactRedirect('error');
     }
 }

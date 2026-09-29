@@ -2,8 +2,14 @@ const cookieBanner = document.getElementById('cookieBanner');
 const acceptCookiesButton = document.getElementById('acceptCookies');
 const contactStatus = document.getElementById('contactStatus');
 
-if (contactStatus && new URLSearchParams(window.location.search).get('contact') === 'sent') {
-  contactStatus.textContent = 'Thank you. Your message has been sent.';
+const contactResult = new URLSearchParams(window.location.search).get('contact');
+const contactMessages = {
+  sent: 'Thank you. Your message has been sent.',
+  error: 'Sorry, we could not send your message. Please email contactus@comwaretechs.com directly.',
+};
+
+if (contactStatus && contactMessages[contactResult]) {
+  contactStatus.textContent = contactMessages[contactResult];
   contactStatus.hidden = false;
   window.history.replaceState(null, '', `${window.location.pathname}#contact`);
 }
