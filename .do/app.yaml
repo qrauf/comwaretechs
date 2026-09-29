@@ -16,26 +16,11 @@ functions:
       branch: logo-update
       deploy_on_push: true
     envs:
-      - key: SMTP_HOST
-        value: smtpout.secureserver.net
-        scope: RUN_AND_BUILD_TIME
-        type: GENERAL
-      - key: SMTP_PORT
-        value: "587"
-        scope: RUN_AND_BUILD_TIME
-        type: GENERAL
-      - key: SMTP_USERNAME
-        value: contactus@comwaretechs.com
-        scope: RUN_AND_BUILD_TIME
-        type: GENERAL
-      # Value is set in the DigitalOcean dashboard, never committed.
+      # Set the real value in the DigitalOcean dashboard, never commit it.
       - key: SMTP_PASSWORD
+        value: PASTE_YOUR_EMAIL_PASSWORD_HERE
         scope: RUN_AND_BUILD_TIME
         type: SECRET
-      - key: CONTACT_TO
-        value: contactus@comwaretechs.com
-        scope: RUN_AND_BUILD_TIME
-        type: GENERAL
 ingress:
   rules:
     - match:
