@@ -36,7 +36,7 @@ ingress:
   rules:
     - match:
         path:
-          prefix: /api
+          prefix: /contact
       component:
         name: comwaretechs-functions
     - match:
