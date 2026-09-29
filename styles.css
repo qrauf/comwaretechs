@@ -73,10 +73,9 @@ textarea {
 
 .brand-logo {
   display: block;
-  width: 132px;
+  width: 112px;
   height: auto;
   object-fit: contain;
-  border-radius: 2px;
 }
 
 .main-nav {
@@ -915,7 +914,7 @@ textarea:focus {
 
 @media (max-width: 560px) {
   .brand-logo {
-    width: 112px;
+    width: 96px;
   }
 
   .main-nav {
