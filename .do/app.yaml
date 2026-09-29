@@ -8,6 +8,8 @@ static_sites:
       deploy_on_push: true
     environment_slug: html
     index_document: index.html
+    # Serves the home page for /about, /contact (and unknown paths).
+    catchall_document: index.html
 functions:
   - name: comwaretechs-functions
     source_dir: /functions

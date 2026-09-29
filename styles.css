@@ -19,6 +19,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Keep section headings clear of the sticky header when jumping to them. */
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+@media (max-width: 860px) {
+  section[id] {
+    scroll-margin-top: 150px;
+  }
+}
+
 body {
   margin: 0;
   font-family: "Source Sans 3", sans-serif;

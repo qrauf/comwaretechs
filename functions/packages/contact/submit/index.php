@@ -20,7 +20,7 @@ function contactResponse(int $statusCode, string $body, array $headers = []): ar
 
 function contactRedirect(string $status = 'sent'): array
 {
-    return contactResponse(303, '', ['Location' => "/?contact={$status}#contact"]);
+    return contactResponse(303, '', ['Location' => "/contact?contact={$status}"]);
 }
 
 function main(array $event, object $context): array

@@ -17,7 +17,49 @@ if (contactResult === 'sent' && contactForm && contactThanks) {
 }
 
 if (contactResult) {
-  window.history.replaceState(null, '', `${window.location.pathname}#contact`);
+  window.history.replaceState(null, '', window.location.pathname);
+}
+
+// Clean URLs for home-page sections: /about and /contact serve the home page
+// (via the static site's catch-all document) and scroll to the section.
+const sectionPaths = { '/': 'top', '/about': 'about', '/contact': 'contact' };
+const normalizePath = (path) => path.replace(/\/+$/, '') || '/';
+
+function scrollToSection(path, behavior) {
+  const section = document.getElementById(sectionPaths[path]);
+  if (!section) return false;
+  if (path === '/') {
+    window.scrollTo({ top: 0, behavior });
+  } else {
+    section.scrollIntoView({ behavior });
+  }
+  return true;
+}
+
+if (document.getElementById('about')) {
+  const initialPath = normalizePath(window.location.pathname);
+  if (initialPath !== '/' && sectionPaths[initialPath]) {
+    window.addEventListener('load', () => scrollToSection(initialPath, 'instant'));
+  }
+
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest('a[href]');
+    if (!link || link.origin !== window.location.origin || link.hash) return;
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;
+
+    const path = normalizePath(link.pathname);
+    if (!sectionPaths[path]) return;
+
+    event.preventDefault();
+    if (normalizePath(window.location.pathname) !== path) {
+      window.history.pushState(null, '', path);
+    }
+    scrollToSection(path, 'smooth');
+  });
+
+  window.addEventListener('popstate', () => {
+    scrollToSection(normalizePath(window.location.pathname), 'smooth');
+  });
 }
 
 if (contactAgainButton) {
