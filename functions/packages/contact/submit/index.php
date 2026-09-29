@@ -66,7 +66,8 @@ function main(array $event, object $context): array
         $mail->SMTPAuth = true;
         $mail->Username = $smtpUsername;
         $mail->Password = $smtpPassword;
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->SMTPSecure = $smtpPort === 465 ? PHPMailer::ENCRYPTION_SMTPS : PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Timeout = 6;
         $mail->Port = $smtpPort;
         $mail->CharSet = PHPMailer::CHARSET_UTF8;
         $mail->setFrom($smtpUsername, 'Comware Technologies');

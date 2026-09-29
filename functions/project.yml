@@ -8,7 +8,7 @@ packages:
           timeout: 10000
         environment:
           SMTP_HOST: smtpout.secureserver.net
-          SMTP_PORT: "3535"
+          SMTP_PORT: "587"
           SMTP_USERNAME: contactus@comwaretechs.com
           CONTACT_TO: contactus@comwaretechs.com
           SMTP_PASSWORD: "${SMTP_PASSWORD}"
