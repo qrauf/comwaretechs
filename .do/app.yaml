@@ -30,6 +30,25 @@ ingress:
           prefix: /api
       component:
         name: comwaretechs-functions
+    # /aws, /azure and /gcp show the cloud partners page (URL is kept).
+    - match:
+        path:
+          prefix: /aws
+      component:
+        name: web
+        rewrite: /cloud-partners/
+    - match:
+        path:
+          prefix: /azure
+      component:
+        name: web
+        rewrite: /cloud-partners/
+    - match:
+        path:
+          prefix: /gcp
+      component:
+        name: web
+        rewrite: /cloud-partners/
     - match:
         path:
           prefix: /
