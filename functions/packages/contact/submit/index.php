@@ -67,7 +67,7 @@ function main(array $event, object $context): array
         $mail->Username = $smtpUsername;
         $mail->Password = $smtpPassword;
         $mail->SMTPSecure = $smtpPort === 465 ? PHPMailer::ENCRYPTION_SMTPS : PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Timeout = 6;
+        $mail->Timeout = 20;
         $mail->Port = $smtpPort;
         $mail->CharSet = PHPMailer::CHARSET_UTF8;
         $mail->setFrom($smtpUsername, 'Comware Technologies');
@@ -84,10 +84,6 @@ function main(array $event, object $context): array
         return contactRedirect();
     } catch (Throwable $error) {
         error_log('Contact form delivery failed: ' . $error->getMessage());
-        // TEMPORARY diagnostics: remove once mail delivery works.
-        if (($input['_debug'] ?? '') === '1') {
-            return contactResponse(200, 'Mail error: ' . $error->getMessage(), ['Content-Type' => 'text/plain; charset=UTF-8']);
-        }
         return contactRedirect('error');
     }
 }

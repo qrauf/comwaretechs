@@ -5,7 +5,7 @@ packages:
         runtime: php:8.2
         web: true
         limits:
-          timeout: 10000
+          timeout: 30000
         environment:
           SMTP_HOST: smtpout.secureserver.net
           SMTP_PORT: "587"
