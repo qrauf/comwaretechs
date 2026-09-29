@@ -2,8 +2,8 @@
   <title id="title">Comware Technologies</title>
   <defs>
     <radialGradient id="bg" cx="50%" cy="45%" r="70%">
-      <stop offset="0" stop-color="#16213a"/>
-      <stop offset="1" stop-color="#090d17"/>
+      <stop offset="0" stop-color="#1d3654"/>
+      <stop offset="1" stop-color="#13263d"/>
     </radialGradient>
     <linearGradient id="ring" x1="192" y1="32" x2="448" y2="288" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#8ce8ff"/>
