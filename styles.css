@@ -280,6 +280,16 @@ textarea {
   margin-bottom: 0.8rem;
 }
 
+.panel-visual {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  margin-bottom: 1.1rem;
+}
+
 .panel-card h2 {
   margin: 0 0 1rem;
   font-size: clamp(1.5rem, 2vw, 2rem);
@@ -303,6 +313,28 @@ textarea {
 .section-heading {
   text-align: center;
   margin-bottom: 2.25rem;
+}
+
+.solutions-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.9fr);
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2.25rem;
+}
+
+.solutions-intro .section-heading {
+  margin: 0;
+  text-align: left;
+}
+
+.solutions-visual {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 20 / 13;
+  object-fit: contain;
+  border-radius: 12px;
 }
 
 .section-heading .eyebrow,
@@ -536,6 +568,16 @@ textarea {
   box-shadow: var(--shadow);
 }
 
+.info-card-image {
+  display: block;
+  width: calc(100% + 3rem);
+  height: auto;
+  aspect-ratio: 9 / 5;
+  object-fit: cover;
+  margin: -2rem -1.5rem 1.5rem;
+  border-radius: 22px 22px 0 0;
+}
+
 .info-card h3 {
   margin: 0 0 0.8rem;
   font-size: 1.45rem;
@@ -582,6 +624,14 @@ textarea {
   padding: 2rem 1.25rem;
   text-align: center;
   box-shadow: var(--shadow);
+}
+
+.stat-icon {
+  display: block;
+  width: 64px;
+  aspect-ratio: 1;
+  object-fit: contain;
+  margin: 0 auto 1rem;
 }
 
 .stat-box strong {
@@ -771,6 +821,7 @@ textarea:focus {
 @media (max-width: 860px) {
   .hero-inner,
   .about-grid,
+  .solutions-intro,
   .card-grid,
   .stats-grid,
   .field-row,
@@ -784,6 +835,19 @@ textarea:focus {
     justify-content: center;
     gap: 0.8rem;
     padding: 1rem 0;
+  }
+
+  .solutions-intro {
+    gap: 1.25rem;
+  }
+
+  .solutions-intro .section-heading {
+    text-align: center;
+  }
+
+  .solutions-visual {
+    max-width: 520px;
+    margin: 0 auto;
   }
 
   .main-nav {
