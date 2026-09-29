@@ -2,7 +2,7 @@ packages:
   - name: contact
     functions:
       - name: submit
-        runtime: php:8.4
+        runtime: php:8.2
         web: true
         limits:
           timeout: 10000

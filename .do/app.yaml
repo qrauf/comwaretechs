@@ -28,6 +28,10 @@ functions:
         value: contactus@comwaretechs.com
         scope: RUN_TIME
         type: GENERAL
+      # Value is set in the DigitalOcean dashboard, never committed.
+      - key: SMTP_PASSWORD
+        scope: RUN_TIME
+        type: SECRET
       - key: CONTACT_TO
         value: contactus@comwaretechs.com
         scope: RUN_TIME
@@ -36,7 +40,7 @@ ingress:
   rules:
     - match:
         path:
-          prefix: /contact
+          prefix: /api
       component:
         name: comwaretechs-functions
     - match:
