@@ -1008,12 +1008,4 @@ textarea:focus {
   .service-cta-inner {
     padding: 1.5rem;
   }
-
-  .site-footer {
-    text-align: center;
-  }
-
-  .footer-inner {
-    justify-content: center;
-  }
 }
