@@ -9,7 +9,7 @@ static_sites:
     environment_slug: html
     index_document: index.html
 functions:
-  - name: contact-api
+  - name: comwaretechs-functions
     source_dir: ./functions
     github:
       repo: qrauf/comwaretechs
@@ -38,7 +38,7 @@ ingress:
         path:
           prefix: /api
       component:
-        name: contact-api
+        name: comwaretechs-functions
     - match:
         path:
           prefix: /
