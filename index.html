@@ -221,7 +221,15 @@
             >View on Google Maps <span aria-hidden="true">→</span></a>
           </div>
 
-          <form class="contact-form" action="/api/contact/submit" method="POST">
+          <div class="contact-thanks" id="contactThanks" role="status" aria-live="polite" tabindex="-1" hidden>
+            <span class="contact-thanks-icon" aria-hidden="true">✓</span>
+            <h3>Thank you for contacting us!</h3>
+            <p>Your message has been sent to the Comware Technologies team. We'll get back to you shortly.</p>
+            <button type="button" class="btn btn-primary submit-btn" id="contactAgain">Send another message</button>
+          </div>
+
+          <form class="contact-form" id="contactForm" action="/api/contact/submit" method="POST">
+            <p class="contact-error" id="contactStatus" role="alert" hidden></p>
             <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display: none" />
             <div class="field-row">
               <div class="field">
@@ -246,8 +254,6 @@
             </label>
 
             <button type="submit" class="btn btn-primary submit-btn">Send</button>
-
-            <p class="recaptcha-note" id="contactStatus" role="status" aria-live="polite" hidden></p>
 
             <p class="recaptcha-note">
               Your message will be sent to contactus@comwaretechs.com using GoDaddy email.

@@ -782,6 +782,61 @@ textarea:focus {
   color: #fff;
 }
 
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.contact-thanks {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: clamp(1.75rem, 4vw, 3rem);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.contact-thanks:focus {
+  outline: none;
+}
+
+.contact-thanks-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background: #e3f4ea;
+  color: #1f7a45;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.contact-thanks h3 {
+  margin: 0 0 0.6rem;
+  color: var(--primary);
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+}
+
+.contact-thanks p {
+  margin: 0 auto 1.5rem;
+  max-width: 460px;
+  color: var(--muted);
+}
+
+.contact-error {
+  margin: 0 0 1.2rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid #f1c4c4;
+  border-radius: 12px;
+  background: #fdf0f0;
+  color: #9b2c2c;
+  font-weight: 500;
+}
+
 .recaptcha-note {
   margin: 1rem 0 0;
   color: var(--muted);
