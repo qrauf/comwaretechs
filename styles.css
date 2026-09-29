@@ -337,6 +337,27 @@ textarea {
   border-radius: 12px;
 }
 
+.hero-platforms {
+  margin-bottom: 1rem;
+}
+
+.hero-platform-logos {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-platform-logos img {
+  display: block;
+  width: min(112px, calc((100% - 1rem) / 3));
+  aspect-ratio: 5 / 2;
+  height: auto;
+  min-width: 0;
+  object-fit: contain;
+  border: 1px solid rgba(190, 224, 231, 0.2);
+  border-radius: 6px;
+}
+
 .section-heading .eyebrow,
 .about .eyebrow,
 .contact-header .eyebrow {
@@ -475,6 +496,11 @@ textarea {
   object-fit: contain;
   display: block;
   border-radius: 18px 18px 0 0;
+}
+
+.cloud-service-card-image {
+  aspect-ratio: 9 / 5;
+  object-fit: cover;
 }
 
 .partner-logo {
