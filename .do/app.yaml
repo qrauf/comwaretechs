@@ -49,6 +49,86 @@ ingress:
       component:
         name: web
         rewrite: /cloud-partners/
+    # /strategy, /migration, ... show the services page (URL is kept).
+    - match:
+        path:
+          prefix: /strategy
+      component:
+        name: web
+        rewrite: /services/
+    - match:
+        path:
+          prefix: /migration
+      component:
+        name: web
+        rewrite: /services/
+    - match:
+        path:
+          prefix: /infrastructure
+      component:
+        name: web
+        rewrite: /services/
+    - match:
+        path:
+          prefix: /security
+      component:
+        name: web
+        rewrite: /services/
+    - match:
+        path:
+          prefix: /automation
+      component:
+        name: web
+        rewrite: /services/
+    - match:
+        path:
+          prefix: /support
+      component:
+        name: web
+        rewrite: /services/
+    - match:
+        path:
+          prefix: /data
+      component:
+        name: web
+        rewrite: /services/
+    - match:
+        path:
+          prefix: /optimization
+      component:
+        name: web
+        rewrite: /services/
+    # /agentic-ai, /generative-ai, ... show the AI services page (URL is kept).
+    - match:
+        path:
+          prefix: /agentic-ai
+      component:
+        name: web
+        rewrite: /ai-services/
+    - match:
+        path:
+          prefix: /generative-ai
+      component:
+        name: web
+        rewrite: /ai-services/
+    - match:
+        path:
+          prefix: /assessment
+      component:
+        name: web
+        rewrite: /ai-services/
+    - match:
+        path:
+          prefix: /big-data
+      component:
+        name: web
+        rewrite: /ai-services/
+    - match:
+        path:
+          prefix: /whitepaper
+      component:
+        name: web
+        rewrite: /ai-services/
     - match:
         path:
           prefix: /

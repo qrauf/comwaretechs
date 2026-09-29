@@ -5,6 +5,31 @@
 const sectionRouteGroups = [
   { marker: 'about', routes: { '/': null, '/about': 'about', '/contact': 'contact' } },
   { marker: 'aws', routes: { '/cloud-partners': null, '/aws': 'aws', '/azure': 'azure', '/gcp': 'gcp' } },
+  {
+    marker: 'strategy',
+    routes: {
+      '/services': null,
+      '/strategy': 'strategy',
+      '/migration': 'migration',
+      '/infrastructure': 'infrastructure',
+      '/security': 'security',
+      '/automation': 'automation',
+      '/support': 'support',
+      '/data': 'data',
+      '/optimization': 'optimization',
+    },
+  },
+  {
+    marker: 'agentic-ai',
+    routes: {
+      '/ai-services': null,
+      '/agentic-ai': 'agentic-ai',
+      '/generative-ai': 'generative-ai',
+      '/assessment': 'assessment',
+      '/big-data': 'big-data',
+      '/whitepaper': 'whitepaper',
+    },
+  },
 ];
 
 const normalizePath = (path) => path.replace(/\/+$/, '') || '/';
